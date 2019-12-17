@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Product Search</string>
+    <string-array name="android_dropdown_arrays">
+        <item>All</item>
+        <item>Art</item>
+        <item>Baby</item>
+        <item>Books</item>
+        <item>Clothing, Shoes &amp; Accessories</item>
+        <item>Computer/Tablets &amp; Networking</item>
+        <item>Health &amp; Beauty</item>
+        <item>Music</item>
+        <item>Video Game and Console</item>
+    </string-array>
+
+    <string-array name="android_type_arrays">
+        <item>Default</item>
+        <item>Name</item>
+        <item>Price</item>
+        <item>Days</item>
+    </string-array>
+
+    <string-array name="android_order_arrays">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+
+
+
+</resources>

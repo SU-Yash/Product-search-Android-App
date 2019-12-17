@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp">
+
+    <TextView
+        android:id="@+id/KeywordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keyword"
+        android:textSize="15sp"
+        android:typeface="serif" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:errorEnabled="true">
+        <EditText
+            android:id="@+id/KeywordText"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_width="354dp"
+            android:ems="10"
+            android:hint="Enter Keyword"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/CategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Category"
+        android:textSize="15sp"
+        android:typeface="serif" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#d11f08"
+        android:entries="@array/android_dropdown_arrays"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/ConditionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Conditions"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/NewCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dip"
+            android:text="New" />
+
+        <CheckBox
+            android:id="@+id/UsedCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dip"
+            android:text="Used" />
+
+        <CheckBox
+            android:id="@+id/UnspecifiedCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dip"
+            android:text="Unspecified" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ShippingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Shipping Options"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/LocalCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dip"
+            android:text="Local Pickup" />
+
+        <CheckBox
+            android:id="@+id/FreeCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dip"
+            android:text="Free Shipping" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/NearbyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Nearby Search "
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/NearbyCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dip"
+            android:onClick="onCheckedChanged"
+            android:text="" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/MilesText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Miles From"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/FromTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/hereRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Current Location"
+            android:onClick="hereRadioClicked"/>
+
+        <RadioButton
+            android:id="@+id/zipRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="zipRadioClicked"/>
+
+    </RadioGroup>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-45dp"
+        app:hintEnabled="false"
+        app:errorEnabled="true">
+        <EditText
+            android:id="@+id/ZipCodeText"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-30dp"
+            android:enabled="false"
+            android:visibility="gone"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+
+            android:layout_marginRight="30dip"
+            android:background="#F05032"
+            android:onClick="onSearchClick"
+            android:text="Search"
+            android:textColor="#fff" />
+
+
+        <Button
+            android:id="@+id/Clear"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#F05032"
+
+            android:onClick="onClearClick"
+            android:text="Clear"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
